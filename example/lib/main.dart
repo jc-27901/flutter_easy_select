@@ -2,10 +2,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easy_select/flutter_easy_select.dart';
 
+/// The entry point of the Flutter Easy Select Demo application.
 void main() {
   runApp(const MyApp());
 }
 
+/// A widget that represents the root of the Flutter Easy Select Demo application.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -22,19 +24,29 @@ class MyApp extends StatelessWidget {
   }
 }
 
+/// The home page widget for the Flutter Easy Select Demo application.
 class MyHomePage extends StatefulWidget {
+  /// Creates an instance of [MyHomePage].
+  ///
+  /// The [title] parameter specifies the title of the page.
   const MyHomePage({super.key, required this.title});
 
+  /// The title of the page.
   final String title;
 
   @override
   MyHomePageState createState() => MyHomePageState();
 }
 
+/// The state for [MyHomePage], managing the selection of fruits and countries.
 class MyHomePageState extends State<MyHomePage> {
+  /// The selected fruit.
   String? _selectedFruit;
+
+  /// The list of selected countries.
   List<Country> _selectedCountries = [];
 
+  /// A list of fruits available for selection.
   final List<String> _fruits = [
     'Apple',
     'Banana',
@@ -45,6 +57,7 @@ class MyHomePageState extends State<MyHomePage> {
     'Grape'
   ];
 
+  /// A list of countries available for selection.
   final List<Country> _countries = [
     Country(name: 'United States', code: 'US', population: 331002651),
     Country(name: 'China', code: 'CN', population: 1439323776),
@@ -94,6 +107,7 @@ class MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  /// Displays a dialog to select a fruit from the list.
   Future<void> _selectFruit() async {
     final String? result = await FlutterEasySelect.single<String>(
       context: context,
@@ -122,6 +136,7 @@ class MyHomePageState extends State<MyHomePage> {
     }
   }
 
+  /// Displays a dialog to select multiple countries from the list.
   Future<void> _selectCountries() async {
     final List<Country>? results = await FlutterEasySelect.multi<Country>(
       context: context,
@@ -148,10 +163,19 @@ class MyHomePageState extends State<MyHomePage> {
   }
 }
 
+/// Represents a country with a name, code, and population.
 class Country {
-  final String name;
-  final String code;
-  final int population;
-
+  /// Creates an instance of [Country].
+  ///
+  /// The [name], [code], and [population] parameters are required.
   Country({required this.name, required this.code, required this.population});
+
+  /// The name of the country.
+  final String name;
+
+  /// The code of the country (e.g., "US" for United States).
+  final String code;
+
+  /// The population of the country.
+  final int population;
 }
