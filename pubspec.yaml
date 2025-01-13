@@ -1,7 +1,8 @@
 name: flutter_easy_select
-description: "A new Flutter project."
-version: 0.0.1
-homepage:
+description: "A Flutter package that provides reusable widgets for single and multi-select dialogs with features like search, custom input, and pre-selection."
+version: 1.0.0
+homepage: https://github.com/jc-27901/flutter_easy_select
+repository: https://github.com/jc-27901/flutter_easy_select
 
 environment:
   sdk: ^3.5.4
