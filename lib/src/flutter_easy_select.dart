@@ -5,7 +5,6 @@ part of '../flutter_easy_select.dart';
 /// This class provides static methods for displaying modal bottom sheets
 /// that allow users to select single or multiple items from a list.
 class FlutterEasySelect {
-
   /// Displays a modal bottom sheet for selecting a single item from a list.
   ///
   /// The [context] parameter is the build context from which the modal

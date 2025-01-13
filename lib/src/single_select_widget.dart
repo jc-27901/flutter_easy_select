@@ -98,7 +98,8 @@ class _SingleSelectWidgetState<T> extends State<SingleSelectWidget<T>> {
   List<T> _getOrderedItems() {
     if (_selectedItem != null) {
       final itemIndex = widget.items.indexWhere((item) =>
-      widget.searchProperty(item) == widget.searchProperty(_selectedItem as T));
+          widget.searchProperty(item) ==
+          widget.searchProperty(_selectedItem as T));
       if (itemIndex != -1) {
         final orderedList = List<T>.from(widget.items);
         orderedList.removeAt(itemIndex);
@@ -155,32 +156,32 @@ class _SingleSelectWidgetState<T> extends State<SingleSelectWidget<T>> {
             /// Displays the list of filtered items or an empty state if none match.
             (_filteredItems.isEmpty)
                 ? const Flexible(
-              child: Center(
-                child: Text('No record(s) found.'),
-              ),
-            )
+                    child: Center(
+                      child: Text('No record(s) found.'),
+                    ),
+                  )
                 : Expanded(
-              child: ListView.builder(
-                keyboardDismissBehavior:
-                ScrollViewKeyboardDismissBehavior.onDrag,
-                itemCount: _filteredItems.length,
-                itemBuilder: (context, index) {
-                  final item = _filteredItems[index];
-                  return RadioListTile<T>(
-                    value: item,
-                    groupValue: _selectedItem,
-                    title: widget.itemBuilder(item),
-                    onChanged: (value) {
-                      setState(() {
-                        _selectedItem = value;
-                        _freeTextSelected = false;
-                      });
-                      _onApply();
-                    },
-                  );
-                },
-              ),
-            ),
+                    child: ListView.builder(
+                      keyboardDismissBehavior:
+                          ScrollViewKeyboardDismissBehavior.onDrag,
+                      itemCount: _filteredItems.length,
+                      itemBuilder: (context, index) {
+                        final item = _filteredItems[index];
+                        return RadioListTile<T>(
+                          value: item,
+                          groupValue: _selectedItem,
+                          title: widget.itemBuilder(item),
+                          onChanged: (value) {
+                            setState(() {
+                              _selectedItem = value;
+                              _freeTextSelected = false;
+                            });
+                            _onApply();
+                          },
+                        );
+                      },
+                    ),
+                  ),
           ],
         ),
       ),

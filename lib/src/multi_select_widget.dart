@@ -97,7 +97,7 @@ class _MultiSelectWidgetState<T> extends State<MultiSelectWidget<T>> {
   void initState() {
     super.initState();
     _selectedItemIds = Set<String>.from(widget.initialSelectedItems
-        ?.map((item) => widget.itemIdentifier(item)) ??
+            ?.map((item) => widget.itemIdentifier(item)) ??
         []);
     isSearchEnable = widget.isSearchEnable;
     title = widget.title;
@@ -207,12 +207,12 @@ class _MultiSelectWidgetState<T> extends State<MultiSelectWidget<T>> {
   List<T> _getSortedItems() {
     final initialSelectedItems = widget.initialSelectedItems ?? [];
     final initialSelectedIds =
-    initialSelectedItems.map(widget.itemIdentifier).toSet();
+        initialSelectedItems.map(widget.itemIdentifier).toSet();
 
     return [
       ...initialSelectedItems,
       ...widget.items.where(
-              (item) => !initialSelectedIds.contains(widget.itemIdentifier(item)))
+          (item) => !initialSelectedIds.contains(widget.itemIdentifier(item)))
     ];
   }
 
