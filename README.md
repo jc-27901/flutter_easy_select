@@ -31,7 +31,7 @@ dependencies:
 Then run:
 
 ```bash
-$ flutter pub get
+$ flutter pub get flutter_easy_select
 ```
 
 ## Usage
@@ -158,6 +158,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-If you find this package helpful, please give it a ⭐️ on [GitHub](your-github-repo-link)!
+If you find this package helpful, please give it a ⭐️ on [GitHub](https://github.com/jc-27901/flutter_easy_select)!
 
-For issues, feature requests, or questions, please [open an issue](your-github-repo-link/issues).
+For issues, feature requests, or questions, please [open an issue](https://github.com/jc-27901/flutter_easy_select/issues).

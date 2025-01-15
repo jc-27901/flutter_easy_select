@@ -27,7 +27,9 @@ class BaseBottomSheetHeader extends StatelessWidget {
           width: 36,
           decoration: BoxDecoration(
             borderRadius: borderAll8,
-            color: Theme.of(context).colorScheme.primary.withOpacity(0.7),
+            color: Theme.of(context).colorScheme.primary.withValues(
+                  alpha: 0.7,
+                ),
           ),
         ),
 
