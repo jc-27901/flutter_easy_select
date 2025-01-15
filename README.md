@@ -16,8 +16,8 @@ A powerful, customizable Flutter package that simplifies item selection and filt
 - 🔄 **Generic Type Support**: Works with both simple types and custom objects
 
 ## Demo
+![easySelect](https://github.com/user-attachments/assets/a0d1ce95-031e-47f0-95ea-f068ec091630)
 
-[Add your demo video or GIF here]
 
 ## Installation
 
